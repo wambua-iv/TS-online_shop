@@ -8,17 +8,17 @@ import { item } from "../App";
 interface Props {
   data: any;
   loading: boolean;
-  handleAddToCart: (item:item) => void;
+  handleAddToCart: (CartItem: item) => void;
 }
 
 const Commodities: React.FC<Props> = ({ data, loading, handleAddToCart }) => {
   return (
     <>
-      <CommoditiesWrapper>
         {loading ? (
           <LinearProgress />
         ) : (
-          data.map((item: item) => (
+          <CommoditiesWrapper>
+            {data.map((item: item) => (
             <Link to={item.id}>
               <div key={item.id} className="item">
                 <div className="item-wrapper">
@@ -35,9 +35,9 @@ const Commodities: React.FC<Props> = ({ data, loading, handleAddToCart }) => {
                 </div>
               </div>
             </Link>
-          ))
+          ))}
+          </CommoditiesWrapper>
         )}
-      </CommoditiesWrapper>
     </>
   );
 };

@@ -2,14 +2,14 @@ import { Trending } from "../styles/Commodities.styles";
 import Commodities from "./Commodities";
 import Drawer from "@mui/material/Drawer"
 import Cart from "./Cart";
-import { item } from "../App";
 import { useState } from "react";
 import { Badge, Button } from "@mui/material";
 import ShoppingCart from "@mui/icons-material/ShoppingCart"
+import { item } from "../App";
 
 type Props ={
   items : any ,
-  handleAddToCart: (item: item)=> void
+  handleAddToCart: (CartItem: item)=> void
   commodities : {
     data : any,
     loading : boolean
