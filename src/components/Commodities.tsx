@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import subImg from "../images/subImg.jpg";
 import { CommoditiesWrapper } from "../styles/Commodities.styles";
 import Button from "@mui/material/Button/index"
 import { LinearProgress } from "@mui/material";
@@ -22,12 +21,10 @@ const Commodities: React.FC<Props> = ({ data, loading, handleAddToCart }) => {
             <Link to={item.id}>
               <div key={item.id} className="item">
                 <div className="item-wrapper">
-                  <img src={subImg} alt="Not found" />
+                  <img src={item.image} alt="Not found" />
                   <div className="content">
                     <p>{item.title}</p>
-                    <p>{item.description}</p>
                     <div className="spacing">
-                      <span>Price :</span>
                       <span>${item.price}</span>
                     </div>
                   </div>

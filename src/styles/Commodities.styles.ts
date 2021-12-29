@@ -21,7 +21,7 @@ export const CommoditiesWrapper = styled.div`
     width: 100%;
     height: 100%;
     flex-direction: column;
-    border: 0.002rem solid #9995;
+    background-color: white  ;
     border-radius: 15px;
 
     .item-wrapper {
@@ -30,9 +30,9 @@ export const CommoditiesWrapper = styled.div`
       flex-direction: column;
 
       img {
-        width: 100%;
-        max-height: 200px;
-        border-radius: 15px 15px 0 0;
+        width: 14rem;
+        max-height: 12rem;
+        margin: .125rem  auto;
       }
 
       .content {
@@ -43,7 +43,9 @@ export const CommoditiesWrapper = styled.div`
 
         .spacing {
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-end;
+          font-size: 1.25rem;
+          font-weight: 500;
         }
       }
     }

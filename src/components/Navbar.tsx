@@ -1,4 +1,5 @@
 import {Nav, NavWrapper, Logo} from "../styles/Navbar.styles"
+import webby from '../images/webby-logo.png'
 
 const NavBar = () => {
     return (
@@ -6,7 +7,7 @@ const NavBar = () => {
             <Nav>
                 <NavWrapper>
                         <Logo>
-                            Webby Shopper
+                            <img src= {webby}/>
                         </Logo>
                         <div className = "hide-for-mobile">
                             <button>

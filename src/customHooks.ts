@@ -20,10 +20,7 @@ export const useFetchAll = (uri: string, nameInStorage: string) => {
         setState(() => ({ data: res.data, loading: false }));
         localStorage.setItem(nameInStorage, JSON.stringify(res.data));
       });
-
     })();
-
-
-  }, [setState, nameInStorage, uri])
+  }, [setState, nameInStorage, uri]);
   return state
 }

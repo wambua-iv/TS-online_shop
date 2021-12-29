@@ -2,7 +2,8 @@ import styled from "styled-components"
 
  export const Nav = styled.nav`
     width: 100%;
-    height: 3rem;
+    margin-top: .5rem;
+
  `;
 
 export const NavWrapper = styled.div`
@@ -15,4 +16,9 @@ export const Logo = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.725rem;
     font-weight: 600;
+
+    img{
+        width: 100px;
+        height: 80px;
+    }
 `;
