@@ -6,9 +6,9 @@ export const Wrapper = createGlobalStyle`
         -webkit-box-sizing: border-box;
         margin: 0;
         padding:  0;
-        max-width: 1024px;
+        max-width: 1072px;
         margin: 0 auto;
-        background-color: #e9e9e9;
+        background-color: white;
 
         .hide-for-mobile{
             @media screen and (max-width : 769px){
@@ -20,6 +20,13 @@ export const Wrapper = createGlobalStyle`
             @media screen and (min-width: 768px){
 		            display: none;
 	        }
+        }
+
+        .container{
+            @media screen and (min-width: 1024px){
+                max-width: 1024px;
+                margin: 0 auto;
+            }
         }
     }
 `;

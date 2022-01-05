@@ -1,6 +1,6 @@
 import { SearchRounded } from '@mui/icons-material'
 import React from 'react'
-import { InputWrap, Wrapper, InputArea } from '../styles/SearchBar.styles'
+import { InputWrap, Wrapper, InputArea } from '../../styles/SearchBar.styles'
 
 const SearchBar = () => {
     return (
@@ -8,26 +8,15 @@ const SearchBar = () => {
             <InputWrap>
                 <InputArea>
                     <label>
-                        Category
+                        Product
                         <input
                             type="text"
                             className="category"
-                            placeholder="Electronics."
+                            placeholder="Search product."
                         />
                     </label>
                 </InputArea>
                 <span></span>
-                {/* <InputArea>
-                    <label>
-                        Category
-                        <input
-                            type="text"
-                            className="item"
-                            placeholder="Phones"
-                        />
-                    </label>
-                </InputArea>
-                <span></span> */}
                 <InputArea>
                     <label>
                         Price

@@ -3,6 +3,14 @@ import styled from "styled-components"
  export const Nav = styled.nav`
     width: 100%;
     margin-top: .5rem;
+    position: relative;
+    z-index: 100;
+    background-color: white ;
+
+    a{
+            text-decoration: none;
+            color: #000;
+        }
 
  `;
 

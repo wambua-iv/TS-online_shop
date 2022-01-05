@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { useFetchAll } from "./customHooks";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Categories from "./components/Categories";
-import Hero from "./components/Hero";
-import NavBar from "./components/Navbar";
-import TrendingCommodities from "./components/TrendingCommodities";
-import Cart from "./components/Cart";
+import NavBar from "./components/layout/Navbar";
+import Cart from "./components/layout/Cart";
 import { Wrapper } from "./styles/global.styles";
+import Commodity from "./components/pages/Commodity";
+import Home from "./components/pages/Home";
+import Auth from "./components/pages/Auth";
 
-export type item = {
+export type Item = {
   id: string;
   title: string;
   price: number;
@@ -19,33 +18,32 @@ export type item = {
   amount: number
 };
 
-
 const App: React.FC = () => {
-  const commodities = useFetchAll("products", "store");
-  const [cart, addToCart] = useState([] as item[]);
+  const [cart, addToCart] = useState([] as Item[]);
 
-  const handleAddToCart = (clickedItem: item) => {
-    addToCart((prev) => {
-      const checkInCart = prev.find(item => item.id === clickedItem.id)
-      if (checkInCart) {
-        return prev.map(item => (
-          item.id === clickedItem.id ? { ...item, amount: +1 } : item
-        ))
-      }
-      return [...prev, { ...clickedItem }]
-    })
+  const handleAddToCart = (clickedItem: Item) => {
+    const checkInCart = cart.find(cartItem => clickedItem.id === cartItem.id)
+    if (checkInCart) {
+      addToCart(prev => (prev.map(item => (
+        clickedItem.id === item.id ? { ...item, amount: item.amount + 1 } : item
+      ))))
+    } else {
+      addToCart(prev => [{...clickedItem, amount: 1}, ...prev])
+    }
   }
 
+  const getTotalItems = (items: Item[]) => items.reduce((ack: number, item) => ack + item.amount, 0)
+  console.log(getTotalItems(cart))
   return (
     <>
       <Wrapper />
-      <NavBar />
       <Router>
-        <Hero />
-        <Categories />
-        <TrendingCommodities handleAddToCart={handleAddToCart} items={cart} commodities={commodities} />
+      <NavBar />
         <Routes>
-          <Route path="/cart" element={<Cart items={cart} />} />
+          <Route path='/' element={<Home handleAddToCart={handleAddToCart} cart={cart} getTotalItems={getTotalItems}/>} />
+          <Route path='/cart' element={<Cart items={cart} handleAddToCart={handleAddToCart} />} />
+          <Route path='/commodity/:id' element={<Commodity />} />
+          <Route path = '/signup' element = {< Auth /> } /> 
         </Routes>
       </Router>
     </>
@@ -53,3 +51,5 @@ const App: React.FC = () => {
 }
 
 export default App;
+
+// 

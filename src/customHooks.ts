@@ -24,3 +24,18 @@ export const useFetchAll = (uri: string, nameInStorage: string) => {
   }, [setState, nameInStorage, uri]);
   return state
 }
+
+export const useForm = (intialValue :any) => {
+  const [values, setValues] = useState(intialValue);
+
+  return [
+    values,
+
+    (e : any) => {
+      setValues({
+        ...values, 
+        [e.target.name]: e.target.value,
+      });
+    },
+  ];
+}

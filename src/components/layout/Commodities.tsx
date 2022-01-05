@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import { CommoditiesWrapper } from "../styles/Commodities.styles";
+import { CommoditiesWrapper } from "../../styles/Commodities.styles";
 import Button from "@mui/material/Button/index"
 import { LinearProgress } from "@mui/material";
-import { item } from "../App";
+import { Item } from "../../App";
+import itemImg from '../../images/cart.jpg'
 
 interface Props {
   data: any;
   loading: boolean;
-  handleAddToCart: (CartItem: item) => void;
+  handleAddToCart: (CartItem: Item) => void;
 }
 
 const Commodities: React.FC<Props> = ({ data, loading, handleAddToCart }) => {
@@ -17,21 +18,25 @@ const Commodities: React.FC<Props> = ({ data, loading, handleAddToCart }) => {
           <LinearProgress />
         ) : (
           <CommoditiesWrapper>
-            {data.map((item: item) => (
-            <Link to={item.id}>
+            {data.map((item: Item) => (
+           
               <div key={item.id} className="item">
                 <div className="item-wrapper">
-                  <img src={item.image} alt="Not found" />
+                  <div className="item-img">
+                  <img src={itemImg} alt="Not found" />
+                  </div>
+                 
                   <div className="content">
+                  <Link to={`commodity/${item.id}`}>
                     <p>{item.title}</p>
-                    <div className="spacing">
+                  </Link>
+                    <div className="price">
                       <span>${item.price}</span>
                     </div>
                   </div>
                   <Button onClick={(()=> handleAddToCart(item))}>Add to Cart</Button>
                 </div>
               </div>
-            </Link>
           ))}
           </CommoditiesWrapper>
         )}

@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-width: 45%;
+width: 50%;
     height: 5rem;
-    margin-top: 17rem;
+    margin-top: 14rem;
     margin-left: 2rem;
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@ export const InputWrap = styled.div`
 `;
 
 export const InputArea = styled.div`
-width:210px;
+        width:38%;
         height: 70%;
         padding: 0 .5rem 0 .5rem;
         color: black;

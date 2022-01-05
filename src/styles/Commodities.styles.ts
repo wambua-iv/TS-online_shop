@@ -1,6 +1,21 @@
 import styled from "styled-components";
 
-export const Trending = styled.div``;
+export const Items = styled.div`
+margin: 7rem auto ;
+
+.title-area{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-area{
+  display: flex;
+  margin: 1rem auto;
+  align-items: center;
+  justify-content: center;
+}
+
+`;
 
 export const CommoditiesWrapper = styled.div`
   width: 100%;
@@ -10,18 +25,26 @@ export const CommoditiesWrapper = styled.div`
 
   a {
       text-decoration: none;
-      color:  #999;
+      color:  #0009;
 
       &:hover{
-        transform: scale(1.005);
+        transform: scale(1.025);
       }
     }
+
+
+    @media screen and (max-width: 640px){
+      width: 80%;
+      margin: auto;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
   .item {
     display: flex;
     width: 100%;
     height: 100%;
     flex-direction: column;
-    background-color: white  ;
+    background-color: #9992 ;
     border-radius: 15px;
 
     .item-wrapper {
@@ -29,22 +52,28 @@ export const CommoditiesWrapper = styled.div`
       justify-content: space-between;
       flex-direction: column;
 
-      img {
+   .item-img{
+    background-color: white ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    img {
         width: 14rem;
         max-height: 12rem;
-        margin: .125rem  auto;
+        margin: .25rem  auto;
       }
-
+   }
       .content {
         padding: 0.325rem;
         display: flex;
         flex-direction: column;
         font-size: .725rem;
 
-        .spacing {
+        .price {
           display: flex;
           justify-content: flex-end;
-          font-size: 1.25rem;
+          font-size: .975rem;
           font-weight: 500;
         }
       }
