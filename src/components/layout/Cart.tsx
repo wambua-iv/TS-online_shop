@@ -1,7 +1,7 @@
 import { Item } from "../../App"
 import { CartItem, CartWrapper } from "../../styles/Cart.style"
 import { Button as Btn  } from '@mui/material';
-import img from '../../images/cart.jpg'
+// import img from '../../images/cart.jpg'
 
 type Props = {
     items: Item[],
@@ -35,8 +35,7 @@ const Cart: React.FC<Props> = ({ items, handleAddToCart }) => {
                     </div>
                     </div>
                     <div className="item-img">
-                        {/* <img src={item.image} alt={item.title} /> */}
-                        <img src={img} alt={item.title} /> 
+                        <img src={item.image} alt={item.title} />
                     </div>
                 </CartItem>
             ))}

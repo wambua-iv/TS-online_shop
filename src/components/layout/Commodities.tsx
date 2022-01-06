@@ -3,7 +3,7 @@ import { CommoditiesWrapper } from "../../styles/Commodities.styles";
 import Button from "@mui/material/Button/index"
 import { LinearProgress } from "@mui/material";
 import { Item } from "../../App";
-import itemImg from '../../images/cart.jpg'
+// import itemImg from '../../images/cart.jpg'
 
 interface Props {
   data: Item[] | null,
@@ -19,13 +19,11 @@ const Commodities: React.FC<Props> = ({ data, loading, handleAddToCart }) => {
         ) : (
           <CommoditiesWrapper>
             {data?.map((item: Item) => (
-           
               <div key={item.id} className="item">
                 <div className="item-wrapper">
                   <div className="item-img">
-                  <img src={itemImg} alt="Not found" />
+                  <img src={item.image} alt="Not found" />
                   </div>
-                 
                   <div className="content">
                   <Link to={`commodity/${item.id}`}>
                     <p>{item.title}</p>
