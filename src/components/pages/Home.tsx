@@ -1,6 +1,7 @@
 import ItemsSection from "../layout/ItemsSection";
 import Hero from "../layout/Hero";
 import { Item } from '../../App'
+import WhyWebby from "../layout/WhyWebby";
 
 interface Props {
 		handleAddToCart: (CartItem: Item) => void;
@@ -24,6 +25,7 @@ const Home: React.FC<Props> = ({handleAddToCart, cart, getTotalItems, commoditie
 			commodities={commodities} 
 			getTotalItems={getTotalItems} 
 			/>
+		<WhyWebby />
 			</div>
 		)
 	}

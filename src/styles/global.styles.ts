@@ -6,7 +6,6 @@ export const Wrapper = createGlobalStyle`
         -webkit-box-sizing: border-box;
         margin: 0;
         padding:  0;
-        max-width: 1072px;
         margin: 0 auto;
         background-color: white;
 

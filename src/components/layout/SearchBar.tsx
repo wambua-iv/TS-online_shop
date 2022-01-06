@@ -21,10 +21,10 @@ const SearchBar = () => {
                     <label>
                         Price
                         <select>
-                            <option value="Modern & Miniumalist">$6000 - $12000</option>
-                            <option value="lime">Lime</option>
-                            <option value="coconut">Coconut</option>
-                            <option value="mango">Mango</option>
+                            <option value="Modern & Miniumalist">$0 - max</option>
+                            <option value="lime">below $100</option>
+                            <option value="coconut">$100 - $1000</option>
+                            <option value="mango">$1000- $5000</option>
                         </select>
                     </label>
                 </InputArea>

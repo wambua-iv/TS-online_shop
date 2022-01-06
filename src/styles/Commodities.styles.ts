@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Items = styled.div`
-margin: 7rem auto ;
+margin-top: 7rem;
 
 .title-area{
   display: flex;

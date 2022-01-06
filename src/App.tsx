@@ -7,6 +7,7 @@ import { Wrapper } from "./styles/global.styles";
 import Commodity from "./components/pages/Commodity";
 import Home from "./components/pages/Home";
 import Auth from "./components/pages/Auth";
+import Footer from "./components/layout/Footer";
 
 export type Item = {
 	id: string;
@@ -52,6 +53,7 @@ const App: React.FC = () => {
 					<Route path='/commodity/:id' element={<Commodity products={commodities} />} />
 					<Route path='/signup' element={< Auth />} />
 				</Routes>
+				<Footer />
 			</Router>
 		</>
 	);
