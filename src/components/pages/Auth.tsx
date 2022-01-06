@@ -28,12 +28,14 @@ const Auth = () => {
                             <div className="user-names">
                                 <input
                                     type="text"
+                                    name = "firstName"
                                     placeholder="First Name"
                                     value={value.firstName}
                                     onChange={setValue}
                                 />
                                 <input
                                     type="text"
+                                    name="lastName"
                                     placeholder="Last Name"
                                     value={value.lastName}
                                     onChange={setValue}
@@ -41,15 +43,17 @@ const Auth = () => {
                             </div>
                             <input
                                     id='full-length'
+                                    name="email"
                                     type="text"
                                     placeholder="Email"
-                                    value={value.firstName}
+                                    value={value.email}
                                     onChange={setValue}
                                 />
                             <div className='passwords'>
                                 
                                 <input
                                     type="password"
+                                    name="password"
                                     placeholder="Password"
                                     value={value.password}
                                     onChange={setValue}
@@ -57,6 +61,7 @@ const Auth = () => {
                                 />
                                 <input
                                     type="password"
+                                    name="confirm_pass"
                                     placeholder="Confirm password"
                                     value={value.confirm_pass}
                                     onChange={setValue}
@@ -72,19 +77,22 @@ const Auth = () => {
                 <Login>
                         <span className="sign-title">Sign in</span>
                         <form>
-                            <input
-                                id='full-length'
-                                type="text"
-                                placeholder="Email"
-                                value={value.firstName}
-                                onChange={setValue}
-                            />
-                            <input
-                                id='full-length'
-                                type="text"
-                                placeholder="Password"
-                                value={value.firstName}
-                                onChange={setValue}
+                        <input
+                            id='full-length'
+                            name="email"
+                            type="text"
+                            placeholder="Email"
+                            value={value.email}
+                            onChange={setValue}
+                                />
+                        <input
+                             id='full-length'
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            value={value.password}
+                            onChange={setValue}
+                            // showPassword={makeVisible}
                             />
                         </form>
                         <Btn

@@ -6,7 +6,7 @@ import { Item } from "../../App";
 import itemImg from '../../images/cart.jpg'
 
 interface Props {
-  data: any;
+  data: Item[] | null,
   loading: boolean;
   handleAddToCart: (CartItem: Item) => void;
 }
@@ -18,7 +18,7 @@ const Commodities: React.FC<Props> = ({ data, loading, handleAddToCart }) => {
           <LinearProgress />
         ) : (
           <CommoditiesWrapper>
-            {data.map((item: Item) => (
+            {data?.map((item: Item) => (
            
               <div key={item.id} className="item">
                 <div className="item-wrapper">

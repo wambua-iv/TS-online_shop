@@ -32,7 +32,7 @@ export const Content = styled.div`
         .aside{
                 display: flex;
                 align-items: center;
-                flex: 2;
+                flex: 3;
                 order: 1;
         }
 
