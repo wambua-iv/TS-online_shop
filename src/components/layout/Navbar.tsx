@@ -1,4 +1,4 @@
-import { useState } from "react"
+//import { useState } from "react"
 import { Link } from "react-router-dom"
 import { Nav, NavWrapper, Logo } from "../../styles/Navbar.styles"
 import webby from '../../images/webby-logo.png'
@@ -7,7 +7,8 @@ import Buttons from "./Button"
 
 
 const NavBar = () => {
-    const [isUserLogged, setIsUserLogged] = useState(false)
+    //const [isUserLogged, setIsUserLogged] = useState(false)
+    const isUserLogged =false
     return (
         <>
             <Nav>

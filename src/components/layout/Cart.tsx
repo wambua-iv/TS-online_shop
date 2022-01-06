@@ -10,8 +10,8 @@ type Props = {
 
 const Cart: React.FC<Props> = ({ items, handleAddToCart }) => {
     const getItemTotal = (price: number, amount: number) => price * amount;
-    const removeCartItem = () => null;
-    const getCartTotal = (items: Item[]) => null;
+   // const removeCartItem = () => null;
+   // const getCartTotal = (items: Item[]) => null;
 
     return (
         <CartWrapper>
