@@ -10,40 +10,45 @@ export const HeroWrapper = styled.div`
 `;
 
 export const Content = styled.div`
-			@media screen and (max-width: 640px){
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 640px){
 			display: block;
 			top: 0;
 			bottom: 0;
-
-                .cart-img{
-                img{
-					width: 70vw;
-					height: 25vh;
-					position: relative;
-                }
             }
         }
-
-        display: flex;
-        justify-content: space-between;
        
-  
-
         .aside{
-                display: flex;
-                align-items: center;
-                flex: 3;
-                order: 1;
+			display: flex;
+			align-items: center;
+			flex: 3;
+			order: 1;
+
+			@media screen and (max-width: 640px){
+				margin-top: -20rem;
+				z-index: 100;
+				position: relative;
+				font-size: 1.15rem;
+				margin-left: 1rem;
+			}
         }
 
         .cart-img{
-                flex: 3;
-                order: 2;
-                img{
-                        width: 45vw;
-                        height: 45vh;
-                        position: relative;
-                        bottom: 10%;
-                }
+			flex: 3;
+			order: 2;
+			img{
+				width: 45vw;
+				height: 45vh;
+				position: relative;
+				bottom: 10%;
+			}
+
+			@media screen and (max-width: 640px){
+				img{
+					width: 90vw;
+				}
+			}
         }
 `;

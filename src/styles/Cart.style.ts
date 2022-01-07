@@ -13,6 +13,7 @@ export const CartWrapper = styled.div`
 
 export const CartItem = styled.div`
     width: 90%;
+    height: 15vh;
     margin: .5rem auto;
     padding: .5rem;
     display: flex;

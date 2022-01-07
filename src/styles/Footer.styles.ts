@@ -10,12 +10,16 @@ export const Wrapper = styled.div`
 		font-size: 1.5rem
         color: #fff;
         margin: auto .5rem;
-	} 
+	}
+
+    a{
+        color: #fff;
+    }
 `;
 
 export const FooterWrapper = styled.div`
     display: flex;
-
+    justify-content: space-between;
 
     .footer-col-1{
         width: 40vw;
@@ -25,14 +29,21 @@ export const FooterWrapper = styled.div`
         flex-direction: column;
         justify-content: space-between;
 
-
         .logo{
-
             img{
                 width: 100px;
                 height: 80px;
             }
+        }
+    }
 
+    .footer-col-2,
+    .footer-col-3{
+        width: 18vw;
+        height: 32vh;
+        margin: 2rem;
+        p{
+            font-size: .875rem;
         }
     }
 

@@ -3,9 +3,18 @@ import styled from "styled-components";
 export const Items = styled.div`
 margin-top: 7rem;
 
+@media screen and (max-width: 640px){
+		margin-top: 12rem;
+    }
+
 .title-area{
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 640px){
+		margin: 0 1rem;
+		align-items: center;
+    }
 }
 
 .btn-area{

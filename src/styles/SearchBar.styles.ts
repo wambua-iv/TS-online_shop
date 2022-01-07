@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-width: 50%;
+    width: 50%;
     height: 5rem;
     margin-top: 14rem;
     margin-left: 2rem;
@@ -11,20 +11,41 @@ width: 50%;
     border: 1px solid #9993;
     position: absolute;
 
+    @media screen and (max-width: 640px){
+		width: 80%;
+		height: 3.5rem;
+		margin-top: 22rem;
+		margin-left: 2rem;
+    }
+
     .input-button {
         width: 50px;
         height: 70%;
         margin: auto;
 
-      .button{
+		@media screen and (max-width: 640px){
+			width: 30px;
+			height: 70%;
+			margin: auto;
+    }
+
+    .button{
         width: 4rem;
         margin: auto;
         height: 3rem;
         border: 1px solid #9993;
         font-size: 1.5rem;
         border-radius: 1rem;
-      }
+
+		@media screen and (max-width: 640px){
+			width: 3rem;
+			height: 2.5rem;
+			
+    	}
     }
+
+	
+}
 `;
 
 export const InputWrap = styled.div`
@@ -48,6 +69,10 @@ export const InputArea = styled.div`
         padding: 0 .5rem 0 .5rem;
         color: black;
         position: relative;
+
+		@media screen and (max-width: 640px){
+			width: 70%;
+    }
 
         label{
             padding: .875rem 0;

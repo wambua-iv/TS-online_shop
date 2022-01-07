@@ -7,11 +7,6 @@ import styled from "styled-components"
     z-index: 100;
     background-color: white ;
 
-    a{
-            text-decoration: none;
-            color: #000;
-        }
-
  `;
 
 export const NavWrapper = styled.div`

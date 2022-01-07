@@ -7,17 +7,17 @@ const SearchBar = () => {
         <Wrapper>
             <InputWrap>
                 <InputArea>
-                    <label>
+                    <label className='hide-for-mobile'>
                         Product
+                    </label>
                         <input
                             type="text"
                             className="category"
                             placeholder="Search product."
                         />
-                    </label>
                 </InputArea>
-                <span></span>
-                <InputArea>
+                <span className='hide-for-mobile'></span>
+                <InputArea className='hide-for-mobile'>
                     <label>
                         Price
                         <select>

@@ -3,17 +3,13 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     width: 45vw;
     height: 65vh;
-    margin: auto;
+    margin: 1rem auto;
     border: 1px solid #9993;
     border-radius: 1rem;
 
     @media screen and (max-width: 640px){
         width: 80vw;
         height: 60vh;
-    }
-
-    form{
-        margin: 1rem 0;
     }
 
     input{

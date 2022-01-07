@@ -28,4 +28,9 @@ export const Wrapper = createGlobalStyle`
             }
         }
     }
+
+    a{
+            text-decoration: none;
+            color: #000;
+        }
 `;
