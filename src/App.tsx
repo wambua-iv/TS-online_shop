@@ -22,17 +22,31 @@ export type Item = {
 
 const App: React.FC = () => {
 	const commodities = useFetchAll("products", "store");
-	const [cart, addToCart] = useState([] as Item[]);
+	const [cart, setCartItem] = useState([] as Item[]);
 
 	const handleAddToCart = (clickedItem: Item) => {
 		const checkInCart = cart.find(cartItem => clickedItem.id === cartItem.id)
 		if (checkInCart) {
-			addToCart(prev => (prev.map(item => (
+			setCartItem(prev => (prev.map(item => (
 				clickedItem.id === item.id ? { ...item, amount: item.amount + 1 } : item
 			))))
 		} else {
-			addToCart(prev => [{ ...clickedItem, amount: 1 }, ...prev])
+			setCartItem(prev => [{ ...clickedItem, amount: 1 }, ...prev])
 		}
+	}
+
+	const removeFromCart = (id: string) => { 
+		setCartItem(prev => 
+			prev.reduce((ack, item) =>{
+				if(item.id === id){
+					if(item.amount === 1) return ack
+					return[ ...ack, { ...item, amount : item.amount -1}]
+				}	else{
+					return [...ack, item]
+				}
+			}, [] as Item[])
+		)
+
 	}
 
 	const getTotalItems = (items: Item[]) => items.reduce((ack: number, item) => ack + item.amount, 0)
@@ -48,8 +62,9 @@ const App: React.FC = () => {
 							cart={cart}
 							getTotalItems={getTotalItems}
 							commodities={commodities}
+							removeFromCart = {removeFromCart}
 						/>} />
-					<Route path='/cart' element={<Cart items={cart} handleAddToCart={handleAddToCart} />} />
+					<Route path='/cart' element={<Cart items={cart} handleAddToCart={handleAddToCart} removeFromCart={removeFromCart}/>} />
 					<Route path='/commodity/:id' element={<Commodity products={commodities} />} />
 					<Route path='/signup' element={< Auth />} />
 				</Routes>

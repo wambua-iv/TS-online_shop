@@ -7,7 +7,7 @@ const getData = (nameInStorage: string) => {
 }
 
 export const useFetchAll = (uri: string, nameInStorage: string) => {
-  const [state, setState] = useState({ data: null, loading: true })
+  const [state, setState] = useState({ data: [], loading: true })
   useEffect(() => {
     const data = getData(nameInStorage);
     if (data) return setState(() => ({ data: data, loading: false }));
