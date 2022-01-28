@@ -29,6 +29,12 @@ export const FooterWrapper = styled.div`
         flex-direction: column;
         justify-content: space-between;
 
+
+    @media screen and (max-width: 640px){
+        width: 80vw;
+        height: 30vh;
+    }
+
         .logo{
             img{
                 width: 100px;

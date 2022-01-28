@@ -18,18 +18,18 @@ const Footer = () => {
                     <Instagram />
                 </div>
             </div>
-            <div className="footer-col-2">
+            <div className="footer-col-2 hide-for-mobile">
                 <h3>Why Choose Webby</h3>
-                <p><a href="#">Large products catalogue</a></p>
-                <p><a href="#">Flexible payment </a></p>
-                <p><a href="#">Affordable delivery fees</a></p>
+                <p><a href=" ">Large products catalogue</a></p>
+                <p><a href=" ">Flexible payment </a></p>
+                <p><a href=" ">Affordable delivery fees</a></p>
 
             </div>
-            <div className="footer-col-3">
+            <div className="footer-col-3  hide-for-mobile">
             <h3>Help</h3>
-                <p><a href="#">About</a></p>
-                <p><a href="#">Contact us </a></p>
-                <p><a href="#">FAQs</a></p>
+                <p><a href=" ">About</a></p>
+                <p><a href=" ">Contact us </a></p>
+                <p><a href=" ">FAQs</a></p>
 
             </div>
         </FooterWrapper>

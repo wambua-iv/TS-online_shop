@@ -11,19 +11,20 @@ import { AddShoppingCartOutlined } from "@mui/icons-material";
 type Props = {
   cart: Item[];
   handleAddToCart: (CartItem: Item) => void;
+  removeFromCart: (id: string) => void;
   getTotalItems : (CartItem : Item[]) => number;
   commodities: {
-	data: Item[] | null,
+	data: Item[] | [],
 	loading: boolean
   }
 }
 
-const ItemsSection: React.FC<Props> = ({ cart, handleAddToCart, commodities, getTotalItems }) => {
+const ItemsSection: React.FC<Props> = ({ cart, handleAddToCart, removeFromCart, commodities, getTotalItems }) => {
   const [openDrawer, setOpenDrawer] = useState(false)
   return (
 	<Items>
 	  <div className="title-area">
-		<h2>Find The Best Products with <span style={{ color: 'yellow' }}>Webby</span>.</h2>
+		<h2>Find The Best of Products with <span style={{ color: 'orange' }}>Webby</span>.</h2>
 		<div>
 		  <Button onClick={() => setOpenDrawer(prev => !prev)}>
 			<Badge badgeContent={getTotalItems(cart)} color="error">
@@ -37,7 +38,11 @@ const ItemsSection: React.FC<Props> = ({ cart, handleAddToCart, commodities, get
 
 	  </div>
 	  <Drawer open={openDrawer} anchor="right" onClose={(() => setOpenDrawer(prev => !prev))}>
-		<Cart items={cart} handleAddToCart={handleAddToCart} />
+		<Cart 
+			items={cart} 
+			handleAddToCart={handleAddToCart}
+			removeFromCart = {removeFromCart}			
+			/>
 	  </Drawer>
 	  <div className="btn-area"><Buttons>Load More</Buttons></div>
 	</Items >

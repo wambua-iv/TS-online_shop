@@ -6,6 +6,10 @@ export const CartWrapper = styled.div`
     height: 100%;
     margin-top: 1rem;
 
+    @media screen and (max-width : 769px){
+		            width: 80vw;
+            }
+
     h3{
         text-align: center;
     }
@@ -23,6 +27,11 @@ export const CartItem = styled.div`
 
     .content-area{
         width: 60%;
+
+        @media screen and (max-width : 769px){
+		            width: 90%;
+                    margin: 0 auto;
+            }
 
         .title{
             font-weight: 500;

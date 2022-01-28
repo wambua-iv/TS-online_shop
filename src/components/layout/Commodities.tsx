@@ -6,7 +6,7 @@ import { Item } from "../../App";
 // import itemImg from '../../images/cart.jpg'
 
 interface Props {
-  data: Item[] | null,
+  data: Item[] | [],
   loading: boolean;
   handleAddToCart: (CartItem: Item) => void;
 }

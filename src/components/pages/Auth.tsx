@@ -20,7 +20,7 @@ const Auth = () => {
 
     return (
         <Wrapper>
-            <h1><span style={{ color: 'yellow', textAlign: 'center', display: 'block' }}>Webby</span></h1>
+            <h2><span style={{ color: 'yellow', textAlign: 'center', display: 'block' }}>Webby</span></h2>
             {isSignUp ? (
                 <SignUp>
                         <span className="sign-title">Sign up</span>

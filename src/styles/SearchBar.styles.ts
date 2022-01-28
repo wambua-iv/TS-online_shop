@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     @media screen and (max-width: 640px){
 		width: 80%;
 		height: 3.5rem;
-		margin-top: 22rem;
+		margin-top: 24rem;
 		margin-left: 2rem;
     }
 
@@ -91,6 +91,10 @@ export const InputArea = styled.div`
             color: #999;
             margin: auto;
             background-color: white ;
+
+            @media screen and (max-width: 640px){
+			          background-color: transparent;
+              }
 
           &:focus {
             outline: none;

@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const HeroWrapper = styled.div`
         width: 100%;
-        height:  30vh;
+        height:  35vh;
         border-radius: 2rem;
         display: flex;
         color: black;
         background-color: white;
+		//position: relative;
 `;
 
 export const Content = styled.div`

@@ -6,11 +6,11 @@ import { Button as Btn  } from '@mui/material';
 type Props = {
     items: Item[],
     handleAddToCart: (CartItem: Item) => void;
+    removeFromCart: (id: string) => void;
 }
 
-const Cart: React.FC<Props> = ({ items, handleAddToCart }) => {
+const Cart: React.FC<Props> = ({ items, handleAddToCart, removeFromCart }) => {
     const getItemTotal = (price: number, amount: number) => price * amount;
-   // const removeCartItem = () => null;
    // const getCartTotal = (items: Item[]) => null;
 
     return (
@@ -25,7 +25,11 @@ const Cart: React.FC<Props> = ({ items, handleAddToCart }) => {
                         <p><span>Total:</span> {getItemTotal(item.price, item.amount)} </p>
                     </div>
                     <div className="amnt-area">
-                    <Btn style={{fontSize: 20}}>-</Btn>
+                    <Btn 
+                        style={{fontSize: 20}}
+                        onClick={(()=> removeFromCart(item.id))}>
+                            -
+                    </Btn>
                     <span>{item.amount}</span>
                     <Btn 
                         style={{fontSize: 20}}
@@ -34,7 +38,7 @@ const Cart: React.FC<Props> = ({ items, handleAddToCart }) => {
                     </Btn>
                     </div>
                     </div>
-                    <div className="item-img">
+                    <div className="item-img hide-for-mobile">
                         <img src={item.image} alt={item.title} />
                     </div>
                 </CartItem>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    width: 45vw;
+    width: 35vw;
     height: 65vh;
     margin: 1rem auto;
     border: 1px solid #9993;
@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
     @media screen and (max-width: 640px){
         width: 80vw;
-        height: 60vh;
+        height: 64vh;
     }
 
     input{
